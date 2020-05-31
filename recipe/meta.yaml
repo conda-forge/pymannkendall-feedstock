@@ -1,18 +1,18 @@
 {% set name = "pymannkendall" %}
-{% set version = "1.2" %}
+{% set version = "1.4" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a10a1cc24c7466bce7e1c0c70c5601ad44aee573d2ce161e6e68b60f6a94e11e
+  sha256: 72b7a033e7311380a4d36858c08ba2fdb9445ee3a3efb1aadde30dedc8a5106c
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
 
 requirements:
   host:
