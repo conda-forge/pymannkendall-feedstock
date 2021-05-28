@@ -18,11 +18,11 @@ requirements:
   host:
     - numpy
     - pip
-    - python
+    - python >=3
     - scipy
   run:
     - numpy
-    - python
+    - python >=3
     - scipy
 
 test:
