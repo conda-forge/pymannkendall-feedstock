@@ -1,5 +1,5 @@
 {% set name = "pymannkendall" %}
-{% set version = "1.4.2" %}
+{% set version = "1.4.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3daf310c11d993211fc3f971d7218da215c6dc99b6eb3e20884a534021df9919
+  sha256: f9e3bbbb583b5285d15082aa0007825e5bea4dde9858d2e7ca81ee6f1e378e82
 
 build:
   number: 0
