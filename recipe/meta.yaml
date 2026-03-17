@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: f9e3bbbb583b5285d15082aa0007825e5bea4dde9858d2e7ca81ee6f1e378e82
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
 
@@ -18,14 +18,16 @@ requirements:
   host:
     - numpy
     - pip
-    - python >=3
+    - python {{ python_min }}
     - scipy
   run:
     - numpy
-    - python >=3
+    - python >={{ python_min }}
     - scipy
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pymannkendall
 
